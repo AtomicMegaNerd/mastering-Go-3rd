@@ -55,5 +55,5 @@ func main() {
 	trimFunction := func(c rune) bool {
 		return !unicode.IsLetter(c)
 	}
-	f("TrimFunc: %s\n", s.TrimFunc("123 abc ABC \t .", trimFunction))
+	f("TrimFunc: %s\n", s.TrimFunc("123 abc ABC 你好\t .", trimFunction))
 }
