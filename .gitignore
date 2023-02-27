@@ -21,4 +21,4 @@
 
 /ch08/grafana_data/*
 /ch08/prometheus_data/*
-
+.direnv
