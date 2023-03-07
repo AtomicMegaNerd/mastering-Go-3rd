@@ -6,7 +6,8 @@ func main() {
 	// Byte slice
 	b := make([]byte, 12)
 	fmt.Println("Byte slice:", b)
-	b = []byte("Byte slice €")
+
+	b = []byte("Byte slice €") // len 14 now because of the € character
 	fmt.Println("Byte slice:", b)
 
 	// Print byte slice contents as text
