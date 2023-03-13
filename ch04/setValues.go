@@ -5,23 +5,23 @@ import (
 	"reflect"
 )
 
-type T struct {
+type HappyFunObject struct {
 	F1 int
 	F2 string
 	F3 float64
 }
 
 func main() {
-	A := T{1, "F2", 3.0}
-	fmt.Println("A:", A)
+	hfo := HappyFunObject{1, "F2", 3.0}
+	fmt.Println("hfo:", hfo)
 
-	r := reflect.ValueOf(&A).Elem()
+	r := reflect.ValueOf(&hfo).Elem()
 	fmt.Println("String value:", r.String())
-	typeOfA := r.Type()
+	hfoType := r.Type()
 	for i := 0; i < r.NumField(); i++ {
 		f := r.Field(i)
-		tOfA := typeOfA.Field(i).Name
-		fmt.Printf("%d: %s %s = %v\n", i, tOfA, f.Type(), f.Interface())
+		hfoTypeName := hfoType.Field(i).Name
+		fmt.Printf("%d: %s %s = %v\n", i, hfoTypeName, f.Type(), f.Interface())
 
 		k := reflect.TypeOf(r.Field(i).Interface()).Kind()
 		if k == reflect.Int {
@@ -31,5 +31,5 @@ func main() {
 		}
 	}
 
-	fmt.Println("A:", A)
+	fmt.Println("hfo:", hfo)
 }

@@ -37,10 +37,11 @@ func (a S2slice) Swap(i, j int) {
 
 func main() {
 	data := []S2{
-		S2{1, "One", S1{1, "S1_1", 10}},
-		S2{2, "Two", S1{2, "S1_1", 20}},
-		S2{-1, "Two", S1{-1, "S1_1", -20}},
+		{1, "One", S1{1, "S1_1", 10}},
+		{2, "Two", S1{2, "S1_1", 20}},
+		{-1, "Two", S1{-1, "S1_1", -20}},
 	}
+
 	fmt.Println("Before:", data)
 	sort.Sort(S2slice(data))
 	fmt.Println("After:", data)
