@@ -7,7 +7,7 @@ import (
 	"sync"
 )
 
-const NUM_ITEMS = 200
+const NUM_ITEMS = 10
 
 type DataHolder struct {
 	items [NUM_ITEMS]int
